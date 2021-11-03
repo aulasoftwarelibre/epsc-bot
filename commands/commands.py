@@ -23,6 +23,10 @@ def numero=0
 def start(message):
     bot.reply_to(message, 'Hello, ' + message.from_user.first_name)
 
+@bot.message_handler(commands=['test'])
+def test(message):
+    bot.reply_to(message, "Prueba")
+
 @bot.message_handler(func=lambda message: date.is_friday() , content_types=['text'] , commands=['post'])
 def post(message):
     if(date.is_friday()):
