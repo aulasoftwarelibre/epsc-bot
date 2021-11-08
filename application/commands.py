@@ -3,7 +3,6 @@ from application import bot
 from telebot.types import Message
 
 def lista=[
-    '@Adoen',
     '@Davison27',
     '@AnonymusRiv',
     '@albapj01',
@@ -13,7 +12,8 @@ def lista=[
     '@MarcosRigal',
     '@Jimeninho',
     '@rafapeerez',
-    '@Silvya292'
+    '@Silvya292',
+    '@Adoen'
 ]
 
 def numero=0
