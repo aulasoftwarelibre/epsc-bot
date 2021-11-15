@@ -2,8 +2,7 @@
 from application import bot
 from telebot.types import Message
 
-def lista=[
-    '@Davison27',
+lista=[
     '@AnonymusRiv',
     '@albapj01',
     '@Xxema23',
@@ -13,10 +12,11 @@ def lista=[
     '@Jimeninho',
     '@rafapeerez',
     '@Silvya292',
-    '@Adoen'
+    '@Adoen',
+    '@Davison27'
 ]
 
-def numero=0
+numero=0
 
 
 @bot.message_handler(commands=['start'])
@@ -25,7 +25,7 @@ def start(message):
 
 @bot.message_handler(commands=['test'])
 def test(message):
-    bot.reply_to(message, "Prueba")
+    bot.reply_to(message, 'Prueba')
 
 @bot.message_handler(func=lambda message: date.is_friday() , content_types=['text'] , commands=['post'])
 def post(message):
@@ -37,3 +37,7 @@ def post(message):
         bot.send_message(CHAT_ID, "Esta semana le toca a {lista[numero]}")
 
     bot.reply_to(message, "Esta semana le toca a {lista[numero]}")
+
+@bot.message_handler(commands=['post'])
+def test(message):
+    bot.reply_to(message, 'Esta semana le toca a {lista[numero]}')
